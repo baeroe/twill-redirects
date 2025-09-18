@@ -31,24 +31,24 @@ class RedirectController extends BaseModuleController
         $form = new Form();
 
         $form->add(
-            Input::make()->name('from')->label('From')->maxLength(250)
-                ->note('Please do not include the full URL. E.g. /from-url')
+            Input::make()->name('from')->label(__('redirect.from'))->maxLength(250)
+                ->note(__('redirect.from_note'))
         );
 
         $form->add(
-            Input::make()->name('to')->label('To')->maxLength(250)
-                ->note('Please do not include the full URL. E.g. /to-url')
+            Input::make()->name('to')->label(__('redirect.to'))->maxLength(250)
+                ->note(__('redirect.to_note'))
         );
 
         $form->add(
             Select::make()
                 ->name('status_code')
-                ->label('Status Code')
+                ->label(__('redirect.status_code'))
                 ->default(301)
                 ->options(
                     Options::make([
-                        Option::make(301, '301 - Moved Permanently'),
-                        Option::make(302, '302 - Temporary Redirect'),
+                        Option::make(301, __('redirect.301')),
+                        Option::make(302, __('redirect.302')),
                     ])
                 )
         );
@@ -67,18 +67,18 @@ class RedirectController extends BaseModuleController
         $form->addFieldset(
             Fieldset::make()->title('Redirect')->id('redirect')
                 ->fields([
-                    Input::make()->name('from')->label('From')->maxLength(250)
-                        ->note('Please do not include the full URL. E.g. /from-url'),
-                    Input::make()->name('to')->label('To')->maxLength(250)
-                        ->note('Please do not include the full URL. E.g. /to-url'),
+                    Input::make()->name('from')->label(__('redirect.from'))->maxLength(250)
+                        ->note(__('redirect.from_note')),
+                    Input::make()->name('to')->label(__('redirect.to'))->maxLength(250)
+                        ->note(__('redirect.to_note')),
                     Select::make()
                         ->name('status_code')
-                        ->label('Status Code')
+                        ->label(__('redirect.status_code'))
                         ->default(301)
                         ->options(
                             Options::make([
-                                Option::make(301, '301 - Moved Permanently'),
-                                Option::make(302, '302 - Temporary Redirect'),
+                                Option::make(301, __('redirect.301')),
+                                Option::make(302, __('redirect302')),
                             ])
                         ),
                 ])
@@ -95,11 +95,11 @@ class RedirectController extends BaseModuleController
         $table = parent::additionalIndexTableColumns();
 
         $table->add(
-            Text::make()->field('to')->title('To')
+            Text::make()->field('to')->title(__('redirect.to'))
         );
 
         $table->add(
-            Text::make()->field('status_code')->title('Status Code')
+            Text::make()->field('status_code')->title(__('redirect.status_code'))
         );
 
         return $table;
