@@ -78,7 +78,7 @@ class RedirectController extends BaseModuleController
                         ->options(
                             Options::make([
                                 Option::make(301, __('redirect.301')),
-                                Option::make(302, __('redirect302')),
+                                Option::make(302, __('redirect.302')),
                             ])
                         ),
                 ])
