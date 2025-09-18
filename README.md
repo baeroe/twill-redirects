@@ -2,9 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/cwsdigital/twill-redirects.svg?style=flat-square)](https://packagist.org/packages/cwsdigital/twill-redirects)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Total Downloads](https://img.shields.io/packagist/dt/cwsdigital/twill-redirects.svg?style=flat-square)](https://packagist.org/packages/baeroe/twill-redirects)
-
-> This is a fork of https://github.com/cwsdigital/twill-redirects. All the credits goes to him. I just added translations.
+[![Total Downloads](https://img.shields.io/packagist/dt/cwsdigital/twill-redirects.svg?style=flat-square)](https://packagist.org/packages/cwsdigital/twill-redirects)
 
 ![Add new redirect module preview](https://github.com/cwsdigital/twill-redirects/blob/main/Twill-Redirects-Preview.png)
 
@@ -19,7 +17,7 @@ This package requires Laravel 8 or higher, PHP8 or higher, and Twill 3.0 or high
 First you want to install this dependency using composer, you can do this by running the following command:
 
 ```shell script
-$ composer require baeroe/twill-redirects
+$ composer require cwsdigital/twill-redirects
 ```
 
 ```shell script
